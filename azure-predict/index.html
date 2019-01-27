@@ -8,16 +8,18 @@
   </head>
 
   <body ng-app="app" ng-controller="ctrl">
-    <input type="file" return-files ng-model="files">
-    <br>
-    <button ng-disabled="!files" ng-click="upload(files)">
-      Upload file
-    </button>
-    <pre>
+      <input type="file" return-files ng-model="files">
+      <br>
+      <button ng-disabled="!files" ng-click="upload(files)">
+          Upload file
+      </button>
+      <pre>
     Name={{files[0].name}}
     Type={{files[0].type}}
     RESULT={{result}}
     </pre>
+          <img ng-if="image" src="{{image}}" alt="">
+              <input my-upload type="file" name="upload">
   </body>
 
 </html>

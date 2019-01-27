@@ -19,7 +19,7 @@ angular.module("app",[])
   $scope.upload = function(files) {
     var promise = $http.post(url,files[0],config);
     promise.then(function(response){
-      $scope.result="Success "+JSON.stringify(response.data);
+      $scope.result="Success "+JSON.stringify(response.data.predictions);
     }).catch(function(errorResponse) {
       $scope.result="Error "+errorRespone.status;
     });
