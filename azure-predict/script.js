@@ -39,7 +39,7 @@ angular.module("app",[])
       else if (response.data.predictions[0].tagName == "organic, food, vegetables, fruit, cooked food, grains, egg shells, bones, dairy, coffee grounds, coffee filters, tea"){
           $scope.category = "Food Scraps";
       }
-      else if(response.data.predictions[0].tagName == "cardboard, box"){
+      else if(response.data.predictions[0].tagName == "cardboard, box" || response.data.predictions[0].tagName == "paper, newspapers, magazines, envelopes, cup sleeves, cereal boxes, sticky notes, notes, books"){
         $scope.category = "Paper";
        }
     }).catch(function(errorResponse) {
